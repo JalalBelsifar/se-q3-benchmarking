@@ -1,5 +1,5 @@
 """
-Test Suite for anagrams module. 
+Test Suite for anagrams module.
 Students should only modify only the `test_long` method.
 """
 __author__ = "madarp"
@@ -33,9 +33,9 @@ class TestAnagrams(unittest.TestCase):
         t = timeit.Timer(f)
         actual_time = round(t.timeit(number=1), 3)
         failure_text = (
-            f'\nfind_anagrams() took {actual_time:.03f} seconds, which exceeds the '
+            f'\nfind_anagrams() took {actual_time:.03f} seconds, which exceeds'
             f'benchmark of {benchmark:.03f} seconds'
-            )
+        )
         self.assertLessEqual(actual_time, benchmark, failure_text)
 
     def test_correct_result(self):
@@ -57,7 +57,7 @@ class TestAnagrams(unittest.TestCase):
     #
     # Students:  Comment out the line below to enable the long test.
     #
-    @unittest.skip("Remove this line once short test passes")
+    # @unittest.skip("Remove this line once short test passes")
     def test_long(self):
         """Check find_anagrams() with long word list."""
         with open("words/long.txt") as f:
@@ -75,7 +75,7 @@ class TestAnagrams(unittest.TestCase):
         self.assertNotEqual(
             self.module.__author__, "???",
             "Author string is not completed"
-            )
+        )
 
 
 if __name__ == '__main__':
